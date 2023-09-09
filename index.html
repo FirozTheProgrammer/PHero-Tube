@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHero Tube</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Daisi UI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Tailwind CSS cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container mx-auto mt-5">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <button
+            onclick="loadVideos('1000')"
+            class="flex btn bg-transparent border-transparent hover:bg-transparent hover:border-transparent"
+          >
+            <span class="mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_13_1206)">
+                  <path
+                    d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                    fill="#FF6B6B"
+                  />
+                  <path
+                    d="M32 16H0C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16Z"
+                    fill="#FF1F3D"
+                  />
+                  <path
+                    d="M11.6249 25.0625C11.4791 25.0625 11.3329 25.0286 11.1982 24.9597C10.8847 24.7994 10.6875 24.4771 10.6875 24.125V7.875C10.6875 7.52294 10.8848 7.20056 11.1982 7.04031C11.5116 6.88006 11.8884 6.90888 12.1739 7.115L23.4239 15.24C23.6679 15.4163 23.8125 15.699 23.8125 16C23.8125 16.301 23.6679 16.5838 23.4239 16.76L12.1739 24.885C12.0111 25.0026 11.8185 25.0625 11.6249 25.0625Z"
+                    fill="#F9F9F9"
+                  />
+                  <path
+                    d="M10.6875 16V24.125C10.6875 24.4771 10.8848 24.7994 11.1982 24.9597C11.3328 25.0286 11.4791 25.0625 11.6249 25.0625C11.8184 25.0625 12.0111 25.0026 12.1739 24.885L23.4239 16.76C23.6679 16.5838 23.8125 16.301 23.8125 16H10.6875Z"
+                    fill="#E2DFF4"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_13_1206">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <p class="text-3xl font-bold">
+              <span class="text-[#ff1f3d]">PH</span> Tube
+            </p>
+          </button>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost bg-gray-300 normal-case text-lg"
+            >Sort by view</a
+          >
+        </div>
+        <div class="navbar-end">
+          <button
+            class="btn btn-ghost text-lg font-medium text-[#FFF] bg-[#ff1f3d] hover:text-[black]"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+      <hr class="my-10" />
+    </nav>
+
+    <!-- main section -->
+    <main class="container mx-auto">
+      <!-- tab section -->
+      <section>
+        <div class="w-full">
+          <div
+            id="tab-container"
+            class="tabs text-center mx-auto flex justify-center"
+          >
+            <!-- <a class="tab">Tab 1</a>
+          <a class="tab">Tab 2</a>
+          <a class="tab">Tab 3</a> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- card section -->
+      <section class="my-20 flex justify-center">
+        <div
+          id="card-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+        ></div>
+      </section>
+    </main>
+
+    <section id="not-found-container"></section>
+    <script src="./app.js"></script>
+  </body>
+</html>
